@@ -12,11 +12,11 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[BroadcastPartner](
 	[Identifier] [bigint] IDENTITY(1,1) NOT NULL,
-	[LastName] [nchar](50) NULL,
-	[FirstName] [nchar](50) NULL,
+	[LastName] [nvarchar](50) NULL,
+	[FirstName] [nvarchar](50) NULL,
 	[Phone] [int] NULL,
-	[Email] [nchar](50) NULL,
-	[Street] [nchar](70) NULL,
+	[Email] [nvarchar](50) NULL,
+	[Street] [nvarchar](70) NULL,
 	[IdentifierCity] [bigint] NULL,
  CONSTRAINT [PK_BroadcastPartner] PRIMARY KEY CLUSTERED 
 (
@@ -28,7 +28,7 @@ GO
 
 CREATE TABLE [dbo].[City](
 	[Identifier] [bigint] IDENTITY(1,1) NOT NULL,
-	[Name] [nchar](50) NULL,
+	[Name] [nvarchar](50) NULL,
 	[ZipCode] [int] NULL
  CONSTRAINT [PK_City] PRIMARY KEY CLUSTERED 
 (
@@ -40,7 +40,7 @@ GO
 
 CREATE TABLE [dbo].[ContractType](
 	[Identifier] [bigint] IDENTITY(1,1) NOT NULL,
-	[Name] [nchar](50) NULL 
+	[Name] [nvarchar](50) NULL 
 CONSTRAINT [PK_ContractType] PRIMARY KEY CLUSTERED 
 (
 	[Identifier] ASC
@@ -50,7 +50,7 @@ GO
 
 CREATE TABLE [dbo].[Job](
 	[Identifier] [bigint] IDENTITY(1,1) NOT NULL,
-	[Name] [nchar](50) NULL,
+	[Name] [nvarchar](50) NULL,
 	[IdentifierDomainJob] [bigint] NULL
 CONSTRAINT [PK_Job] PRIMARY KEY CLUSTERED 
 (
@@ -63,7 +63,7 @@ GO
 
 CREATE TABLE [dbo].[DomainJob](
 	[Identifier] [bigint] IDENTITY(1,1) NOT NULL,
-	[Name] [nchar](50) NULL
+	[Name] [nvarchar](50) NULL
 CONSTRAINT [PK_DomainJob] PRIMARY KEY CLUSTERED 
 (
 	[Identifier] ASC
@@ -99,7 +99,7 @@ GO
 
 CREATE TABLE [dbo].[Pack](
 	[Identifier] [bigint] IDENTITY(1,1) NOT NULL,
-	[Name] [nchar](50) NULL,
+	[Name] [nvarchar](50) NULL,
 	[Prix] [int] NULL,
 	[OfferNumber] [int] NULL,
 CONSTRAINT [PK_Pack] PRIMARY KEY CLUSTERED 
