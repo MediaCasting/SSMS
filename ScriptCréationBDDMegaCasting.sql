@@ -77,9 +77,9 @@ CREATE TABLE [dbo].[Offer](
 	[Identifier] [bigint] IDENTITY(1,1) NOT NULL,
 	[Name] [nvarchar](50) NOT NULL,
 	[Reference] [nvarchar](50) NULL,
-	[PublishDateTime] [dateTime] NULL,
+	[PublishDateTime] [datetime2] NULL,
 	[Duration] [int] NOT NULL,
-	[StartContractDate] [datetime] NULL,
+	[StartContractDate] [datetime2] NULL,
 	[PostCount] [int] NULL,
 	[JobDescription] [nvarchar](2000) NULL,
 	[ProfilDescription] [nvarchar](2000) NULL,
@@ -143,7 +143,7 @@ GO
 CREATE TABLE [dbo].[Messagerie](
 	[Identifier] [bigint] IDENTITY(1,1) NOT NULL,
 	[Texte] [nvarchar] (500) NULL,
-	[Date] [date] NULL,
+	[Date] [datetime2] NULL,
 	[QuiEcrit] [bit] NULL,
 	[IdentifierArtist] [bigint] NOT NULL,
 	[IdentifierProducer] [bigint] NOT NULL
